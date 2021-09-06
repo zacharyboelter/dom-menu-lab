@@ -7,16 +7,6 @@ var menuLinks = [
 ];
 
 
-
-let aEl = document.createElement('a');
-
-aEl.setAttribute('href', 'link');
-
-aEl.
-
-
-
-/////// work above this line
 const mainEl = document.querySelector('main');
 
 mainEl.style.backgroundColor = 'var(--main-bg)';
@@ -34,16 +24,10 @@ topMenuEl.style.backgroundColor = 'var(--top-menu-bg)';
 topMenuEl.classList.add('flex-around');
 
 
-////////////// No idea what to do
-
-// let menuAnch=menuLinks.map(r=>`<li> <a href='${r.href}'>${r.text} </a> </li>`).join("");
-// document.getElementById("mylinks").innerHTML=menuAnch;
-// console.log(menuAnch);
-
-
-
-/////////////  Myabe we can make this work
-
-// var links = menuLinks.map(link => `<a href='${link.href}'>${link.text}</a>`);
-
-// console.log(links);
+// go through each link of links and add 'a', set it all to the hrefs/text. Append to topMenuEl
+for (links of menuLinks) {
+    let aEl = document.createElement('a');
+    aEl.setAttribute('href', 'links.href');
+    aEl.textContent = links.text;
+    topMenuEl.appendChild(aEl);
+}
